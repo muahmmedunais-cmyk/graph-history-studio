@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Canva Studio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5fa;
+            color: #222;
+        }
+
+        header {
+            background: white;
+            padding: 18px 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+                 }
+
+        .hero {
+            padding: 45px 35px;
+            background: linear-gradient(120deg, #7654e8, #a66df0);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+        .create-btn {
+            background: white;
+            color: #7654e8;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .content {
+            padding: 35px;
+        }
+
+        .content h2 {
+            margin-bottom: 25px;
+        }
+
+        .templates {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .template {
+            width: 180px;
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 3px 12px #00000010;
+            cursor: pointer;
+        }
+
+        .template:hover {
+            transform: translateY(-4px);
+        }
+
+        .preview {
+            height: 190px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .poster {
+            background: linear-gradient(135deg, #151515, #555);
+        }
+
+        .instagram {
+            background: linear-gradient(135deg, #ff8a00, #e52e71);
+        }
+
+        .story {
+            background: linear-gradient(135deg, #1e90ff, #7b2ff7);
+        }
+
+        .youtube {
+            background: linear-gradient(135deg, #ff3333, #8b0000);
+        }
+
+        .template p {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            header, .hero, .content {
+                padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    
+      <header>
+    <div class="logo">
+        <img src="logo.webp" alt="Graph.history">
+    </div>
+
+    <div>Graph.history Studio</div>
+</header>
+    <section class="hero">
+        <h1>What will you design today?</h1>
+        <p>Create posters, social media graphics and more.</p>
+
+        <button class="create-btn" onclick="openEditor()">
+            + Create a design
+        </button>
+    </section>
+
+    <section class="content">
+        <h2>Start creating</h2>
+
+        <div class="templates">
+
+            <div class="template">
+                <div class="preview poster">POSTER</div>
+                <p>Poster Design</p>
+            </div>
+
+            <div class="template">
+                <div class="preview instagram">INSTAGRAM</div>
+                <p>Instagram Post</p>
+            </div>
+
+            <div class="template">
+                <div class="preview story">STORY</div>
+                <p>Instagram Story</p>
+            </div>
+
+            <div class="template">
+                <div class="preview youtube">YOUTUBE</div>
+                <p>YouTube Thumbnail</p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+<script>
+    function openEditor() {
+        alert("welcome to Graph.history studio! Your editor is starting.");
+    }
+    </script>
+</html>
