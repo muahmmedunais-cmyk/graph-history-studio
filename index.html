@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101114">
+<title>Graph.History Studio — Create Without Limits</title>
+<meta name="description" content="A creative workspace for posters, brand visuals and social media designs. Create with Graph.History Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101114;--panel:#17191e;--panel2:#20232a;--line:#30343d;--text:#f4f5f7;--muted:#9ba1ad;--accent:#b9f36b;--ink:#17200d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+header{height:76px;border-bottom:1px solid #292d35;background:#101114ed;display:flex;align-items:center;position:sticky;top:0;z-index:10;backdrop-filter:blur(16px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:9px;white-space:nowrap}.brand img{display:block;width:168px;height:auto;max-height:48px;object-fit:contain;border-radius:4px}.brand small{font:600 9px 'DM Sans';letter-spacing:2px;color:var(--muted)}
+.links{display:flex;align-items:center;gap:28px;color:#b5bac4;font-size:13px}.links a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:9px;background:var(--accent);color:var(--ink);font-weight:800;font-size:13px;border:1px solid var(--accent);transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px #b9f36b25}.btn.secondary{background:transparent;color:var(--text);border-color:#454b55}.btn.secondary:hover{border-color:var(--accent);color:var(--accent);box-shadow:none}
+.hero{padding:82px 0 76px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-100px;top:-180px;background:radial-gradient(circle,#b9f36b18,transparent 68%);pointer-events:none}.hero-grid{display:grid;grid-template-columns:1fr .9fr;gap:55px;align-items:center;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase}.eyebrow:before{content:"";width:22px;height:1px;background:var(--accent)}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}h1{font-size:clamp(44px,6.2vw,76px);line-height:.99;letter-spacing:-4px;margin:22px 0 20px;max-width:650px}h1 span{color:var(--accent)}.hero-copy{max-width:520px;color:#aeb3bd;font-size:16px;line-height:1.8}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.micro{margin-top:22px;color:#777f8b;font-size:11px}
+.preview-shell{background:linear-gradient(145deg,#242831,#15171c);border:1px solid #3a404a;border-radius:18px;padding:13px;box-shadow:0 28px 80px #0008;transform:rotate(1.5deg)}.preview-top{height:27px;display:flex;align-items:center;gap:5px;padding:0 5px 10px}.dot{width:7px;height:7px;border-radius:50%;background:#59606c}.preview-label{margin-left:auto;font-size:9px;letter-spacing:1.5px;color:#89919d}
+.mock-workspace{display:grid;grid-template-columns:36px 1fr 92px;gap:8px;height:300px}.mock-rail,.mock-side{background:#111318;border:1px solid #30343d;border-radius:7px}.mock-rail{display:flex;flex-direction:column;align-items:center;gap:14px;padding:12px 0;color:#b9f36b}.mock-rail i{font-style:normal;font-size:13px}.mock-center{background:#101216;border:1px solid #30343d;border-radius:7px;display:flex;align-items:center;justify-content:center;padding:15px}.poster{width:165px;height:240px;background:linear-gradient(160deg,#293d31 0%,#131b18 55%,#080a09 100%);position:relative;overflow:hidden;padding:17px;box-shadow:0 8px 25px #0009}.poster:before{content:"";position:absolute;width:120px;height:170px;border-radius:50%;background:#b9f36b24;filter:blur(20px);right:-35px;top:22px}.poster-kicker{font-size:7px;letter-spacing:2px;color:#d7e6c5;position:relative}.poster-title{position:absolute;left:15px;bottom:39px;font:700 27px/.88 'Space Grotesk';letter-spacing:-1px;color:#f3f0e7}.poster-foot{position:absolute;left:16px;bottom:15px;font-size:6px;letter-spacing:1.5px;color:#b9f36b}.mock-side{padding:10px 7px}.side-line{height:5px;background:#343943;border-radius:8px;margin:7px 0}.side-line.short{width:55%}.side-box{height:35px;border:1px solid #343943;border-radius:5px;margin:11px 0}.side-accent{height:5px;width:65%;background:var(--accent);border-radius:5px;margin:12px 0}
+.stats{border-top:1px solid #292d35;border-bottom:1px solid #292d35;padding:20px 0}.stats-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.stat{color:#858d99;font-size:11px;letter-spacing:1px;text-transform:uppercase}.stat b{color:#f2f3f5;font:600 14px 'Space Grotesk';display:block;margin-bottom:4px}
+section.content{padding:82px 0}.section-top{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:30px}.section-top h2{font-size:34px;letter-spacing:-1.5px;margin:0 0 8px}.section-top p{color:var(--muted);margin:0;font-size:14px;line-height:1.6}.section-tag{color:var(--accent);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#69794c}.art{height:180px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;font:700 26px/.95 'Space Grotesk';letter-spacing:-1px}.art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0005,transparent 65%)}.art span{position:relative;z-index:1}.art.minimal{background:linear-gradient(135deg,#e9e4d8,#a9a58f);color:#24251e}.art.cinema{background:radial-gradient(ellipse at 65% 30%,#825b3e,#27211e 48%,#0e1010);color:#f1e5ce}.art.product{background:linear-gradient(135deg,#d8dfd1,#71836e 55%,#283b2f);color:#17231b}.art.branding{background:linear-gradient(135deg,#241d31,#725d83);color:#f4e9ff}.art.social{background:linear-gradient(135deg,#202c3b,#577b91);color:#f4f6f2}.art.editorial{background:linear-gradient(135deg,#6b2827,#171719 75%);color:#f2d7c6}.card-body{padding:17px}.card-body h3{margin:0 0 6px;font-size:15px}.card-body p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}
+.tools{background:#15171c;border-top:1px solid #292d35;border-bottom:1px solid #292d35}.tool-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.tool-card{padding:21px;border:1px solid #30343d;border-radius:12px;background:#191c22}.tool-icon{width:34px;height:34px;border-radius:9px;background:#2a3321;color:var(--accent);display:grid;place-items:center;font-size:17px}.tool-card h3{font-size:14px;margin:15px 0 7px}.tool-card p{font-size:12px;line-height:1.65;color:var(--muted);margin:0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.step{border-top:1px solid #3a404a;padding-top:17px}.step b{color:var(--accent);font:600 12px 'Space Grotesk';letter-spacing:1px}.step h3{font-size:17px;margin:13px 0 7px}.step p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+.final-cta{padding:58px 0;background:radial-gradient(ellipse at 70% 50%,#b9f36b15,transparent 55%),#171a1f;border-top:1px solid #30343d}.cta-row{display:flex;align-items:center;justify-content:space-between;gap:25px}.cta-row h2{font-size:clamp(27px,4vw,40px);letter-spacing:-1.5px;margin:0 0 8px}.cta-row p{margin:0;color:var(--muted);font-size:14px}
+footer{padding:25px 0;color:#777f8b;font-size:11px}footer .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}footer strong{font-family:'Space Grotesk';color:#dfe2e7}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:42px}.preview-shell{max-width:560px;width:100%;margin:auto}.cards{grid-template-columns:repeat(2,1fr)}.tool-grid{grid-template-columns:repeat(2,1fr)}.links{gap:15px}.section-top h2{font-size:29px}}
+@media(max-width:560px){.wrap{width:min(100% - 32px,1160px)}header{height:65px}.links a:not(.nav-cta){display:none}.brand img{width:126px;max-height:36px}.brand small{font-size:8px}.nav-cta{padding:10px 12px;font-size:11px}.hero{padding:60px 0 52px}h1{font-size:49px;letter-spacing:-2.8px}.hero-copy{font-size:14px}.hero-actions .btn{width:100%}.preview-shell{padding:8px}.mock-workspace{height:250px;grid-template-columns:29px 1fr 70px;gap:5px}.poster{width:140px;height:205px}.poster-title{font-size:23px}.stats-row{display:grid;grid-template-columns:1fr 1fr}.stat{font-size:9px}.stat b{font-size:12px}section.content{padding:58px 0}.section-top{display:block}.section-top .section-tag{display:block;margin-bottom:10px}.section-top h2{font-size:28px}.cards{gap:10px}.art{height:135px;font-size:21px}.card-body{padding:12px}.card-body h3{font-size:13px}.card-body p{font-size:11px}.tool-grid{gap:9px}.tool-card{padding:15px}.steps{grid-template-columns:1fr;gap:22px}.cta-row{display:block}.cta-row .btn{margin-top:22px;width:100%}footer .foot{display:block}footer .foot span{display:block;margin:6px 0}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="index.html" aria-label="Graph.History Studio home"><img src="graph-history-logo.png" alt="Graph.History logo"><small>STUDIO</small></a>
+  <nav class="links" aria-label="Main navigation">
+   <a href="#inspiration">Inspiration</a><a href="#tools">Tools</a><a href="#workflow">How it works</a>
+   <a class="btn nav-cta" href="editor.html">Open Studio ↗</a>
+  </nav>
+ </div>
+</header>
+<main>
+ <section class="hero">
+  <div class="wrap hero-grid">
+   <div>
+    <div class="eyebrow">Your creative workspace</div>
+    <h1>Make ideas<br>look <span>extraordinary.</span></h1>
+    <p class="hero-copy">A creative workspace with 100 editable poster templates, 50 English font styles, image tools and a growing library of design elements. Build posters, campaigns and brand visuals with control over every layer.</p>
+    <div class="hero-actions"><a class="btn" href="editor.html">＋ Start creating</a><a class="btn secondary" href="#inspiration">Explore the workspace ↓</a></div>
+    <div class="micro">NO ACCOUNT REQUIRED · WORK LOCALLY · EXPORT YOUR DESIGNS</div>
+   </div>
+   <div class="preview-shell" aria-label="Illustration of the Graph.History Studio editor">
+    <div class="preview-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="preview-label">GRAPH.HISTORY / WORKSPACE</span></div>
+    <div class="mock-workspace">
+     <div class="mock-rail"><i>↖</i><i>▧</i><i>T</i><i>◇</i><i>▤</i></div>
+     <div class="mock-center"><div class="poster"><div class="poster-kicker">A VISUAL STUDY / 001</div><div class="poster-title">FORM<br>MEETS<br>FEELING.</div><div class="poster-foot">DESIGN YOUR OWN STORY</div></div></div>
+     <div class="mock-side"><div class="side-line short"></div><div class="side-line"></div><div class="side-box"></div><div class="side-line short"></div><div class="side-line"></div><div class="side-box"></div><div class="side-accent"></div></div>
+    </div>
+   </div>
+  </div>
+ </section>
+ <div class="stats"><div class="wrap stats-row"><div class="stat"><b>100 editable templates</b>Start with a designed layout</div><div class="stat"><b>50 English fonts</b>Find the right typographic voice</div><div class="stat"><b>Creative elements</b>Icons, graphics and mockup scenes</div><div class="stat"><b>Export when ready</b>PNG · JPG · SVG · Project</div></div></div>
+ <section class="content" id="inspiration">
+  <div class="wrap">
+   <div class="section-top"><div><span class="section-tag">Find your direction</span><h2>What will you create?</h2><p>Explore visual directions, then build your own composition in the editor.</p></div></div>
+   <div class="cards">
+    <article class="card"><div class="art minimal"><span>LESS<br>IS MORE.</span></div><div class="card-body"><h3>Minimal posters</h3><p>Strong typography, clean spacing and confident simplicity.</p></div></article>
+    <article class="card"><div class="art cinema"><span>AFTER<br>THE DARK</span></div><div class="card-body"><h3>Cinematic visuals</h3><p>Atmosphere, contrast and dramatic visual storytelling.</p></div></article>
+    <article class="card"><div class="art product"><span>PURE<br>FORM</span></div><div class="card-body"><h3>Product campaigns</h3><p>Give products a clear focal point and polished presentation.</p></div></article>
+    <article class="card"><div class="art branding"><span>MAKE<br>A MARK.</span></div><div class="card-body"><h3>Brand creatives</h3><p>Build a consistent visual language for a brand or project.</p></div></article>
+    <article class="card"><div class="art social"><span>YOUR<br>STORY.</span></div><div class="card-body"><h3>Social media</h3><p>Create feed posts and vertical visuals for your audience.</p></div></article>
+    <article class="card"><div class="art editorial"><span>FRAME<br>THE MOMENT</span></div><div class="card-body"><h3>Editorial layouts</h3><p>Combine imagery, type and details with intentional hierarchy.</p></div></article>
+   </div>
+  </div>
+ </section>
+ <section class="content tools" id="tools">
+  <div class="wrap">
+   <div class="section-top"><div><span class="section-tag">Built for making</span><h2>Tools that stay out of your way.</h2><p>Start with a template or blank canvas, then customise the details.</p></div></div>
+   <div class="tool-grid">
+    <article class="tool-card"><div class="tool-icon">T</div><h3>Typography</h3><p>Add editable text, choose fonts, adjust size, spacing, alignment and styling.</p></article>
+    <article class="tool-card"><div class="tool-icon">▧</div><h3>Image editing</h3><p>Import images, resize, flip, adjust opacity and apply available filters.</p></article>
+    <article class="tool-card"><div class="tool-icon">▤</div><h3>Layer control</h3><p>Select, hide, lock and reorder elements with front, back and step controls.</p></article>
+    <article class="tool-card"><div class="tool-icon">◈</div><h3>Canvas & export</h3><p>Choose canvas dimensions and export your design in supported formats.</p></article>
+     <article class="tool-card"><div class="tool-icon">▦</div><h3>100 editable templates</h3><p>Browse ten creative categories and customise the text, shapes and colours.</p></article>
+     <article class="tool-card"><div class="tool-icon">Aa</div><h3>50 English fonts</h3><p>Explore display, serif, sans-serif, script and editorial type styles.</p></article>
+     <article class="tool-card"><div class="tool-icon">✧</div><h3>Elements & mockups</h3><p>Add icons, stickers, graphic symbols, frames and editable mockup scenes.</p></article>
+   </div>
+  </div>
+ </section>
+ <section class="content" id="workflow">
+  <div class="wrap">
+   <div class="section-top"><div><span class="section-tag">A simple workflow</span><h2>From blank canvas to finished visual.</h2><p>Start with the essentials. Keep control of the details as your design develops.</p></div></div>
+   <div class="steps">
+    <article class="step"><b>01 / START</b><h3>Open a canvas</h3><p>Choose a canvas size that matches your poster, social post or campaign format.</p></article>
+    <article class="step"><b>02 / COMPOSE</b><h3>Build your layout</h3><p>Add text, images and shapes. Arrange the layers until the visual hierarchy feels right.</p></article>
+    <article class="step"><b>03 / FINISH</b><h3>Export your design</h3><p>Save a local project or export the finished artwork in a supported format.</p></article>
+   </div>
+  </div>
+ </section>
+ <section class="final-cta">
+  <div class="wrap cta-row"><div><h2>Your next idea starts here.</h2><p>Open Graph.History Studio and start building your next visual.</p></div><a class="btn" href="editor.html">Open Graph.History Studio ↗</a></div>
+ </section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 <strong>GRAPH.HISTORY STUDIO</strong></span><span>Made for creative minds. Designed to keep you creating.</span></div></footer>
+</body>
+</html>
